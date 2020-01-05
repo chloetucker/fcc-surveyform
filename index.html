@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>FCC: Survey Form Project</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+		<h1 id="title" class="text-center">freeCodeCamp Survey</h1>
+		<p id="description" class="description text-center">
+			Thank you for helping us improve the freeCodeCamp curriculum and community!</p>
+		<p class="text-center">&#11088</p>
+	<!--This is where the form section starts. Please note that freeCodeCamp is referred to as "FCC" throughout the comments.-->
+	<form id="survey-form">
+		<!--Name field-->
+		<div class="form-group">
+			<label id="name-label" for="name">Full Name</label>
+			<input type="text" name="name" id="name" class="form-control" placeholder="Enter your full name" required />
+		</div>
+		<!--Email field-->
+		<div class="form-group">
+			<label id="email-label" for="email">Email Address</label>
+			<input type="email" name="email" id="email" class="form-control" placeholder="Enter your email address" required />
+		</div>
+		<!--Age field - referred to as "number" to satisfy FCC project requirements-->
+		<div class="form-group">
+			<label id="number-label" for="number">Age<span class="helptext">(optional)</span></label>
+			<input type="number" name="age" id="number" min="10" max="110	" class="form-control" placeholder="Age" />
+		</div>
+		<!--Question about likelihood of respondent recommending FCC to a friend-->
+		<div class="form-group">
+			<p>How likely are you to recommend freeCodeCamp to a friend?</p>
+			<label>
+        <input name="user-recommend" value="very likely" type="radio" class="input-radio" checked/>Very likely</label>
+			<label><input name="user-recommend" value="somewhat likely" type="radio" class="input-radio"/>Somewhat likely</label>
+			<label><input name="user-recommend" value="not likely" type="radio" class="input-radio"/>Not likely</label>
+		</div>
+		<!--Question about respondent's favorite part of FCC-->
+		<div class="form-group">
+			<p>What is your favorite part of freeCodeCamp?</p>
+			<select id="dropdown" name="mostLike" class="form-control" required>
+        <option disabled selected value>Select an option</option>
+        <option value="challenges">Challenges</option>
+        <option value="projects">Projects</option>
+        <option value="community">Community</option>
+        <option value="openSource">Open Source</option>
+      </select>
+		</div>
+		<!--Question about respondent's least favorite part of FCC-->
+		<div class="form-group">
+			<p>
+				What is your least favorite part of freeCodeCamp?
+			</p>
+			<select id="dropdown" name="leastLike" class="form-control" required>
+        <option disabled selected value>Select an option</option>
+        <option value="challenges">Challenges</option>
+        <option value="projects">Projects</option>
+        <option value="community">Community</option>
+        <option value="openSource">Open Source</option>
+      </select>
+		</div>
+		<!--Question about respondent's completed FCC certificates-->
+		<div class="form-group">
+			<p>What freeCodeCamp certifications have you completed?
+				<span class="helptext">(Check all that apply)</span></p>
+			<label><input name="certifications" value="responsive-web-design" type="checkbox" class="input-checkbox"/>Responsive Web Design</label>
+			<label><input name="certifications" value="javascript-algorithms-and-data-structures" type="checkbox" class="input-checkbox" />Javascript Algorithms and Data Structures</label>
+			<label><input name="certifications" value="front-end-libraries" type="checkbox" class="input-checkbox" />Front End Libraries</label>
+			<label><input name="certifications" value="data-visualization" type="checkbox" class="input-checkbox" />Data Visualization</label>
+			<label><input name="certifications" value="apis-and-microservices" type="checkbox" class="input-checkbox" />APIs and Microservices</label>
+			<label><input name="certifications" value="information-security-and-quality-assurance" type="checkbox" class="input-checkbox" />Information Security and Quality Assurance</label>
+			<label><input name="certifications" value="none" type="checkbox" class="input-checkbox" />None</label>
+		</div>
+		<!--Free text field for additional respondent feedback-->
+		<div class="form-group">
+			<p>Please include any comments or suggestions here:</p>
+			<textarea id="comments" class="input-textarea" name="comment" placeholder="Enter comments or suggestions here."></textarea>
+		</div>
+		<!--Submit button-->
+		<div class="form-group">
+			<button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+		</div>
+	</form>
+</div>
+<!-- partial -->
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+</body>
+</html>
