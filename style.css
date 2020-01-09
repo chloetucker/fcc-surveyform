@@ -22,7 +22,6 @@ body {
 h1 {
 	font-family: "Exo", sans-serif;
 	line-height: 1.2;
-	margin-top: -40px;
 	padding: 0 0.625rem;
 	margin-bottom: 1.875rem;
 	color: #034ea2;
@@ -36,10 +35,6 @@ h2 {
 	margin-bottom: -30px;
 	display: inline-block;
 }
-
-.main {
-	overflow; scroll;
-}	
 
 /* Shapes/brand name/button stylings */
 
